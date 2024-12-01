@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graph Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="controls">
+    <div id="input-container">
+      <textarea id="input" placeholder="Enter your graph data here..."></textarea>
+      <div id="progress-bars">
+        <div class="progress-container">
+          <label for="edge-size">Edge Size:</label>
+          <input type="range" id="edge-size" min="10" max="100" step="1" value="50">
+          <span id="edge-size-value">50</span>
+        </div>
+        <div class="progress-container">
+          <label for="node-size">Node Size:</label>
+          <input type="range" id="node-size" min="5" max="30" step="1" value="10">
+          <span id="node-size-value">10</span>
+        </div>
+      </div>
+      <div id="buttons">
+        <button id="random-btn">Random</button>
+        <button id="tree-btn">Tree</button>
+        <button id="topo-btn">Topological Sort</button>
+        <button id="arc-btn">Arc</button>
+      </div>
+      <div id="tree-root-container">
+        <label for="tree-root">Root Node:</label>
+        <input type="text" id="tree-root" placeholder="Enter root node">
+      </div>
+    </div>
+  </div>
+  
+  <div id="visualizer"></div>
+  
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
